@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+@media only screen and (max-width: 600px) {
+    .sub {
+        width: 100%; /* Make items take full width on smaller screens */
+    }
+  
+}
+/* body{
+    background: url(./Images/background.jpg);
+    background-size: cover;
+    background-position: fixed ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+} */
+.bg-dark{
+    background: rgb(24, 24, 22);
+    color: white;
+}
+.top{
+    background: #8B9FB7;
+    font-size: 25px;
+    color: rgb(38, 41, 37);
+    height: 80px;
+    position: sticky;
+    top: 0%;
+}
+.container, .display{
+    /* border: 2px solid black; 
+     background: red;   */
+    display: flex;
+    height: 60px;
+    width: 100vw;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 0.9px;
+}
+.sub , .mode , .date {
+    display: flex;
+    border: 2px solid rgb(48, 53, 48);
+    height: 100%;
+    width: 19.5%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    
+}
+.Home{
+    background: orange;
+}
+.Services{
+    background: purple;
+}
+.support{
+    background: yellow;
+}
+.dark{
+    background: rgb(22, 22, 22);
+    color: white;
+    font-weight: bold;
+}
+.sub:hover{
+    box-shadow: 0 10px 20px rgb(57, 61, 57);
+}
+.dark:hover{
+    box-shadow: 0 10px 20px rgb(43, 41, 41);
+}
+.light:hover{
+    box-shadow: 0 10px 10px rgb(230, 226, 45);
+}
+.advertisement{
+    border: 2px solid grey;
+    background: yellow;
+    height: 20vh;
+    width: 80%;
+    border-radius: 20px;
+    background: url(./Images/advertisement.jpg);
+    background-size: 100% 100%;
+}
+.date{
+    font-size: 30px;
+    background: gray;
+    color: aliceblue;
+}
+/* Form du stylings ertava eli */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#result, #bookingForm, #paymentForm, #ticketDisplay, #busOptions {
+    margin-top: 20px;
+}
+
+.passenger {
+    margin-top: 10px;
+}
+
+#error {
+    color: red;
+    margin-top: 5px;
+}
+
+#confirmationMessage {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#busOptions {
+    display: none;
+    margin-top: 10px;
+}
+
+.bus-option {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bus-option:hover {
+    background-color: #45a049;
+}
+
+#pnr {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.align{
+    margin-top: 20vh;
+    display: flex;
+    border: 2px solid grey;
+    /* justify-items: center; */
+    justify-content: center;
+    background: gainsboro;
+    box-shadow: 0 10px 20px grey;
+    border-radius: 20px;
+    
+}

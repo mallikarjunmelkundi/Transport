@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mallikarjun Transportation</title>
+    <link rel="shortcut icon" href="./Favicon/long-truck-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top"><div>
+        <marquee behavior="alternate" direction="right" scrollamount="5"><h1>Welcome to Mallikarjun Transportation Ltd.</h1></marquee> </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="sub Home">Home</div>
+        <div class="sub Services">Services</div>
+        <div class="sub support">Gallery</div>
+        <button class="mode light">Light</button>
+        <button class="mode dark">Dark</button>
+      </div>
+      <div class="display">
+        <div  class="advertisement"></div>
+        <div class="date" id="demo"></div>
+      </div>
+    </main>
+    <div class="align">
+        <form id="transportForm">
+            <label for="from"><b>From:</b> </label>
+            <select id="from" required>
+                <option value="banglore">Banglore</option>
+                <option value="gulbarga">Gulbarga</option>
+                <option value="hubli">Hubli</option>
+            </select>
+    
+            <label for="to"><b>To:</b></label>
+            <select id="to" required>
+                <option value="banglore">Banglore</option>
+                <option value="gulbarga">Gulbarga</option>
+                <option value="hubli">Hubli</option>
+            </select>
+    
+            <label for="date"><b>Date:</b></label>
+            <input type="date" id="date" required>
+    
+            <div id="error"></div>
+    
+            <label for="passengers">Number of Passengers:</label>
+            <input type="number" id="passengers" min="1" value="1" required>
+    
+            <button type="button" onclick="searchBuses()">Search</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+    
+            <div id="busOptions"></div>
+        </form>
+    
+        <div id="result"></div>
+    
+        <div id="bookingForm" style="display: none;">
+            <h2>Booking Form</h2>
+            <div id="busTypeSelection">
+                <label for="busType">Select Bus Type:</label>
+                <select id="busType" onchange="selectBusType()">
+                    <option value="Rajahamsa">Rajahamsa</option>
+                    <option value="KSRTC">KSRTC</option>
+                    <option value="VRL">VRL</option>
+                </select>
+            </div>
+    
+            <form id="passengerForm" onsubmit="submitBookingForm(event)">
+                <div id="mathQuestion">
+                    <p>Answer the following math question to confirm the booking:</p>
+                    <span id="question"></span>
+                    <input type="number" id="answer" required>
+                </div>
+    
+                <div id="passengerDetails" class="passenger">
+                    <!-- Passenger details will be added dynamically -->
+                </div>
+    
+                <div id="totalCost" class="passenger" style="display: none;">
+                    <p>Total Cost: Rs. <span id="cost">0</span></p>
+                </div>
+    
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    
+        <div id="paymentForm" style="display: none;">
+            <h2>Dummy Payment Gateway</h2>
+            <form id="paymentDetailsForm" onsubmit="submitPaymentForm(event)">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" required>
+    
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" required>
+    
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required>
+    
+                <button type="submit">Make Payment</button>
+            </form>
+        </div>
+    
+        <div id="ticketDisplay" style="display: none;">
+            <h2>Booking Confirmation</h2>
+            <div id="confirmationMessage"></div>
+            <div id="ticketDetails" class="passenger"></div>
+            <div id="pnr"></div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
